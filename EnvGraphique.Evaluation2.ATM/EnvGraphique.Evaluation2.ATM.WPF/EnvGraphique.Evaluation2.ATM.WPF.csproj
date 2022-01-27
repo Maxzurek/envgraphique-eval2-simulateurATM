@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8BAEB90-16AE-49D9-A499-E31E983C14A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EnvGraphique.Evaluation2.ATM.WPF</RootNamespace>
+    <AssemblyName>EnvGraphique.Evaluation2.ATM.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.5.0.2\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\Admin\AdminBlockUserCommand.cs" />
+    <Compile Include="Commands\Admin\AdminCreateAccountCommand.cs" />
+    <Compile Include="Commands\Admin\AdminCreateUserCommand.cs" />
+    <Compile Include="Commands\Admin\AdminRefillAtmCommand.cs" />
+    <Compile Include="Commands\Admin\AdminIncreaseMarginBalanceCommand.cs" />
+    <Compile Include="Commands\Admin\AdminPayInterestCommand.cs" />
+    <Compile Include="Commands\Admin\AdminUnblockUserCommand.cs" />
+    <Compile Include="Commands\Admin\AdminMortgagePaymentCommand.cs" />
+    <Compile Include="Commands\Main\DisplayAdminViewCommand.cs" />
+    <Compile Include="Commands\Main\DisplayClientViewCommand.cs" />
+    <Compile Include="Commands\Main\DisplayLoginViewCommand.cs" />
+    <Compile Include="Commands\Authentication\LoginCommand.cs" />
+    <Compile Include="Commands\Authentication\LogoutCommand.cs" />
+    <Compile Include="Commands\Client\TransactionDepositCommand.cs" />
+    <Compile Include="Commands\Client\TransactionPaymentCommand.cs" />
+    <Compile Include="Commands\Client\TransactionTransferCommand.cs" />
+    <Compile Include="Commands\Client\TransactionWithdrawCommand.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\Navigation\ChangeAdminViewCommand.cs" />
+    <Compile Include="Commands\Navigation\ChangeClientViewCommand.cs" />
+    <Compile Include="Controls\AccountCard.xaml.cs">
+      <DependentUpon>AccountCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminNavigationBar.xaml.cs">
+      <DependentUpon>AdminNavigationBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientNavigationBar.xaml.cs">
+      <DependentUpon>ClientNavigationBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainWindowBar.xaml.cs">
+      <DependentUpon>MainWindowBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="State\Navigator.cs" />
+    <Compile Include="ViewModels\Admin\AdminCreateAccountViewModel.cs" />
+    <Compile Include="ViewModels\Admin\AdminCreateUserViewModel.cs" />
+    <Compile Include="ViewModels\Admin\AdminTransactionsViewModel.cs" />
+    <Compile Include="ViewModels\Admin\AdminMortgagePaymentViewModel.cs" />
+    <Compile Include="ViewModels\Admin\AdminHomeViewModel.cs" />
+    <Compile Include="ViewModels\Client\ClientDepositViewModel.cs" />
+    <Compile Include="ViewModels\Client\ClientPaymentViewModel.cs" />
+    <Compile Include="ViewModels\Client\ClientTransferViewModel.cs" />
+    <Compile Include="ViewModels\Client\ClientHomeViewModel.cs" />
+    <Compile Include="ViewModels\Client\ClientWithdrawViewModel.cs" />
+    <Compile Include="ViewModels\Login\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\NavigationBars\AdminNavigationBarViewModel.cs" />
+    <Compile Include="ViewModels\NavigationBars\ClientNavigationBarViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\Admin\AdminCreateAccountView.xaml.cs">
+      <DependentUpon>AdminCreateAccountView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminTransactionsView.xaml.cs">
+      <DependentUpon>AdminTransactionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminMortgagePaymentView.xaml.cs">
+      <DependentUpon>AdminMortgagePaymentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminCreateUserView.xaml.cs">
+      <DependentUpon>AdminCreateUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminHomeView.xaml.cs">
+      <DependentUpon>AdminHomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\ClientDepositView.xaml.cs">
+      <DependentUpon>ClientDepositView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\ClientPaymentView.xaml.cs">
+      <DependentUpon>ClientPaymentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\ClientTransferView.xaml.cs">
+      <DependentUpon>ClientTransferView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\ClientWithdrawView.xaml.cs">
+      <DependentUpon>ClientWithdrawView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\ClientHomeView.xaml.cs">
+      <DependentUpon>ClientHomeView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\AccountCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AdminNavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ClientNavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MainWindowBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\Common.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\AdminCreateAccountView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\AdminTransactionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\AdminMortgagePaymentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\AdminCreateUserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Admin\AdminHomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\ClientDepositView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\ClientPaymentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\ClientTransferView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\ClientWithdrawView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\ClientHomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnvGraphique.Evaluation2.ATM.Domain\EnvGraphique.Evaluation2.ATM.Domain.csproj">
+      <Project>{9F25D88F-F815-4ADB-910C-1E18711E1287}</Project>
+      <Name>EnvGraphique.Evaluation2.ATM.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFCustomControl\WPFCustomControl.csproj">
+      <Project>{cdc76b3b-1b1f-4dcf-8473-381c71ee0df7}</Project>
+      <Name>WPFCustomControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\login_background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\checkingAccount-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\marginAccount-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\mortgageAccount-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\savingAccount-removebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

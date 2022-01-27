@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F25D88F-F815-4ADB-910C-1E18711E1287}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnvGraphique.Evaluation2.ATM.Domain</RootNamespace>
+    <AssemblyName>EnvGraphique.Evaluation2.ATM.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ATMDbContext.cs" />
+    <Compile Include="Models\Account.cs">
+      <DependentUpon>ATMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountType.cs">
+      <DependentUpon>ATMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ATMModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATMModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ATMModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ATMModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ATMModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTOs\AccountDTO.cs" />
+    <Compile Include="Models\DTOs\TransactionDTO.cs" />
+    <Compile Include="Models\ObservableObject.cs" />
+    <Compile Include="Models\DTOs\UserDTO.cs" />
+    <Compile Include="Models\Transaction.cs">
+      <DependentUpon>ATMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransactionType.cs">
+      <DependentUpon>ATMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>ATMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserType.cs">
+      <DependentUpon>ATMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Admin\AdminManagementService.cs" />
+    <Compile Include="Services\Admin\IAdminManagementService.cs" />
+    <Compile Include="Services\Authentication\ILoginService.cs" />
+    <Compile Include="Services\Authentication\LoginService.cs" />
+    <Compile Include="Services\Data\AccountDataService.cs" />
+    <Compile Include="Services\Data\IAccountDataService.cs" />
+    <Compile Include="Services\Data\IDataService.cs" />
+    <Compile Include="Services\Data\ITransactionDataService.cs" />
+    <Compile Include="Services\Data\IUserDataService.cs" />
+    <Compile Include="Services\Data\TransactionDataService.cs" />
+    <Compile Include="Services\Data\UserDataService.cs" />
+    <Compile Include="Services\Exceptions\AdminCreateAccountNoCheckingAccountException.cs" />
+    <Compile Include="Services\Exceptions\DbConnectionFailedException.cs" />
+    <Compile Include="Services\Exceptions\ExistingUsernameException.cs" />
+    <Compile Include="Services\Exceptions\TransactionAccountTypeException.cs" />
+    <Compile Include="Services\Exceptions\TransactionAtmSystemInsufficientFundException.cs" />
+    <Compile Include="Services\Exceptions\TransactionInsufficientFundsException.cs" />
+    <Compile Include="Services\Exceptions\TransactionInvalidAmountException.cs" />
+    <Compile Include="Services\Exceptions\TransactionInvalidDivisibleAmountException.cs" />
+    <Compile Include="Services\Exceptions\TransactionMaxWithdrawalAmountException.cs" />
+    <Compile Include="Services\Exceptions\TransactionNegativeArgumentException.cs" />
+    <Compile Include="Services\Exceptions\UserDataNotFoundException.cs" />
+    <Compile Include="Services\Transactions\ITransactionService.cs" />
+    <Compile Include="Services\Transactions\TransactionService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Models\ATMModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ATMModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\ATMModel.edmx.diagram">
+      <DependentUpon>ATMModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\ATMModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ATMModel.edmx</DependentUpon>
+      <LastGenOutput>ATMModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ATMModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ATMModel.edmx</DependentUpon>
+      <LastGenOutput>ATMModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

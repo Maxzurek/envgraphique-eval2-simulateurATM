@@ -1,0 +1,13 @@
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\bin\Debug\WPFCustomControlRefactor.dll
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\bin\Debug\WPFCustomControlRefactor.pdb
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\InputField.g.cs
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor_MarkupCompile.cache
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor_MarkupCompile.lref
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\InputField.baml
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor.g.resources
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor.Properties.Resources.resources
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor.csproj.GenerateResource.cache
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor.csproj.CoreCompileInputs.cache
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor.dll
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor.pdb
+B:\Coding\VisualStudio_WorkSpace\C#\WPFCustomControlRefactor\WPFCustomControlRefactor\obj\Debug\WPFCustomControlRefactor.csproj.AssemblyReference.cache

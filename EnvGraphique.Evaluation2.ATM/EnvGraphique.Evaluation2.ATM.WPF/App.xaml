@@ -1,0 +1,17 @@
+﻿<Application x:Class="EnvGraphique.Evaluation2.ATM.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewmodels="clr-namespace:EnvGraphique.Evaluation2.ATM.WPF.ViewModels"
+             xmlns:views="clr-namespace:EnvGraphique.Evaluation2.ATM.WPF.Views"
+             xmlns:local="clr-namespace:EnvGraphique.Evaluation2.ATM.WPF">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml"/>
+                <ResourceDictionary Source="/Styles/NavigationBar.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

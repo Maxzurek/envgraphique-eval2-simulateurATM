@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e8baeb90-16ae-49d9-a499-e31e983c14a9": {
+      "ProjectGuid": "e8baeb90-16ae-49d9-a499-e31e983c14a9",
+      "DisplayName": "EnvGraphique.Evaluation2.ATM.WPF",
+      "ColorIndex": 0
+    },
+    "cdc76b3b-1b1f-4dcf-8473-381c71ee0df7": {
+      "ProjectGuid": "cdc76b3b-1b1f-4dcf-8473-381c71ee0df7",
+      "DisplayName": "WPFCustomControl",
+      "ColorIndex": 1
+    },
+    "3146d616-d099-4415-82ae-9d2f6a89b823": {
+      "ProjectGuid": "3146d616-d099-4415-82ae-9d2f6a89b823",
+      "DisplayName": "EnvGraphique.Evaluation2.ATM.WPF.Test",
+      "ColorIndex": 2
+    },
+    "9f25d88f-f815-4adb-910c-1e18711e1287": {
+      "ProjectGuid": "9f25d88f-f815-4adb-910c-1e18711e1287",
+      "DisplayName": "EnvGraphique.Evaluation2.ATM.Domain",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}

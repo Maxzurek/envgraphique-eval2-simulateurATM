@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="EnvGraphique.Evaluation2.ATM.WPF.Views.ClientHomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EnvGraphique.Evaluation2.ATM.WPF.Views" xmlns:controls="clr-namespace:EnvGraphique.Evaluation2.ATM.WPF.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" Foreground="{x:Null}">
+        <Grid>
+            <ItemsControl Margin="10 10 50 10" ItemsSource="{Binding LoggedInUserAccounts}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <controls:AccountCard Margin="10"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

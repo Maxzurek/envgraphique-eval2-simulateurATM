@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="EnvGraphique.Evaluation2.ATM.WPF.Controls.MainWindowBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EnvGraphique.Evaluation2.ATM.WPF.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="header" Grid.Row="0" Text="Guichet ATM" Padding="20 5" Foreground="#FFE6E4E4" FontWeight="Bold" FontSize="22">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="{StaticResource ColorHeaderSecondary}" Offset="0.25"/>
+                    <GradientStop Color="{StaticResource ColorHeaderPrimary}" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Button x:Name="buttonMinimize" Grid.Row="0" Grid.Column="1" Width="40" FontSize="18" Content="-" FontWeight="Bold" Foreground="#FFE6E4E4" BorderThickness="0,0,0,0" Click="buttonMinimize_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="{StaticResource ColorHeaderSecondary}" Offset="0.25"/>
+                    <GradientStop Color="{StaticResource ColorHeaderPrimary}" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="buttonClose" Grid.Row="0" Grid.Column="2" Width="40" FontSize="18" Content="X" Foreground="White" FontWeight="Normal" BorderThickness="0,0,0,0" Click="buttonClose_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="{StaticResource ColorHeaderSecondary}" Offset="0.25"/>
+                    <GradientStop Color="{StaticResource ColorHeaderPrimary}" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+        </Button>
+    </Grid>
+</UserControl>
