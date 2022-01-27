@@ -57,3 +57,5 @@ Transactions:		Affichage de la liste des transactions de tout les comptes enregi
 			Il est possible de filtrer les transactions par : Id; Type de transaction; Montant; Date; Id compte cible et Id compte source.
 Prélèvements:		Sélectionnez un compte hypothéquecaire enregistré dans le système comme compte source, entrez le montant à prélever et appuyez sur "Valider".
 ```
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
